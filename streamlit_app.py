@@ -19,8 +19,8 @@ session = cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name'),col('search_on'))
 
 pd_df = my_dataframe.to_pandas()
-# st.dataframe(pd_df)
-# st.stop()
+st.dataframe(pd_df)
+st.stop()
 
 # max ingredients is weird but fine
 ingredients_list = st.multiselect(
